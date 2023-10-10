@@ -32,26 +32,41 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.credit_card),
             label: const Text("Basic"),
             style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(Colors.blue.shade500),
-                foregroundColor: MaterialStateProperty.all(Colors.white)),
+              backgroundColor: MaterialStateProperty.all(Colors.blue.shade500),
+              foregroundColor: MaterialStateProperty.all(Colors.white),
+            ),
           ),
-          const SizedBox(
-            width: 24,
-          ),
+          const SizedBox(width: 24),
           const Icon(Icons.notifications),
-          const SizedBox(
-            width: 24,
-          ),
+          const SizedBox(width: 24),
         ],
       ),
-      body: const Column(
-        children: [
-          TextField(
-            decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search), hintText: "Search"),
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            Container(
+              height: 40,
+              decoration: BoxDecoration(color: Colors.grey.shade200),
+              child: TextField(
+                decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.grey.shade200,
+                  ),
+                  hintText: "Search",
+                  hintStyle: TextStyle(color: Colors.grey.shade400),
+                  /*border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(color: Colors.white),
+                  ),*/
+                  border: InputBorder.none,
+                  contentPadding: const EdgeInsets.all(8),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
