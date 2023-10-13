@@ -44,6 +44,7 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // search field
             Container(
@@ -153,6 +154,128 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 32),
             const Text("In & Out"),
+            const SizedBox(height: 32),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.pink.shade400,
+                child: const Text(
+                  "A",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              title: const Text(
+                "TAZKD",
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: const Text(
+                "28 Jul 2023",
+              ),
+              trailing: const SizedBox(
+                width: 180,
+                child: Row(
+                  children: [
+                    Text(
+                      "Money received",
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "+5 US\$",
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            // bottom
+
+            Center(
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  "Show all",
+                  style: TextStyle(
+                    color: Colors.blue.shade300,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
+            // Bottom nav
+            Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 40,
+                vertical: 8,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue.shade400,
+                borderRadius: BorderRadius.circular(
+                  100,
+                ),
+              ),
+              color: Colors.blue.shade800,
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.home,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Home",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.credit_card,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "Card",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Icon(
+                        Icons.history,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        "History",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
